@@ -1,17 +1,8 @@
 import math
-from Vertex import Vertex
 import random
 import pygame
 import time
-
-#My_position=[862, 93]
-#tarpos =[294,808]
-#My_position= [random.randint(0, 900),random.randint(100, 800)]
-#tarpos = [random.randint(0, 900),random.randint(100, 800)]
-#Positions=[]
-#for x in range(100):
-#	Positions.append([random.randint(0, 900),random.randint(100, 800)])
-#Positions=[[501, 335], [249, 380], [544, 696], [225, 159], [11, 124], [334, 559], [634, 95], [455, 632], [89, 611], [17, 243], [316, 67], [727, 223], [589, 534], [736, 703], [578, 361], [663, 614], [654, 623], [677, 345], [622, 583], [516, 20], [640,404], [480, 15], [440, 168], [542, 412], [578, 551], [294, 308], [249, 250], [663, 682], [650, 57], [470, 514], [352, 601], [631, 519], [416, 617],[717, 436], [202, 469], [47, 620], [441, 529], [91, 175], [415, 600]]
+from Vertex import Vertex
 
 class Dijkstra:
 	def __init__(self, vertexS, vertexT, points):
@@ -157,7 +148,12 @@ class Dijkstra:
 			pygame.draw.circle(win,(0,0,255),(self.startvx.vertex[0],self.startvx.vertex[1]),dist_c*2,2)
 			pygame.display.update()
 
-"""#start tests
+#Variable
+My_position=[862, 93]
+tarpos =[294,808]
+Positions=[[501, 335], [249, 380], [544, 696], [225, 159], [11, 124], [334, 559], [634, 95], [455, 632], [89, 611], [17, 243], [316, 67], [727, 223], [589, 534], [736, 703], [578, 361], [663, 614], [654, 623], [677, 345], [622, 583], [516, 20], [640,404], [480, 15], [440, 168], [542, 412], [578, 551], [294, 308], [249, 250], [663, 682], [650, 57], [470, 514], [352, 601], [631, 519], [416, 617],[717, 436], [202, 469], [47, 620], [441, 529], [91, 175], [415, 600]]
+
+#start tests
 pygame.init()
 win = pygame.display.set_mode((1000,900))
 run = True
@@ -181,7 +177,6 @@ def show_point(win,vertex,color,weight=weight):
 	win.blit(prepos,(v[0]-10,v[1]+25))
 
 d=Dijkstra(My_position, tarpos, Positions)
-
 while run:
 	win.fill(white)
 	#for stx in d.scaned_vertex:
@@ -201,4 +196,4 @@ while run:
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			run = False
-			pygame.quit()"""
+			pygame.quit()
